@@ -78,7 +78,7 @@
 			<div class="nalika-profile">
 				<div class="profile-dtl">
 					<a href="#"><img src="img/notification/4.jpg" alt="" /></a>
-					<h2>Nguyễn Tấn <span class="min-dtn">Đức</span></h2>
+					<h2>Nguyễn Trọng <span class="min-dtn">Giáp</span></h2>
 				</div>
 				<div class="profile-social-dtl">
 					<ul class="dtl-social">
