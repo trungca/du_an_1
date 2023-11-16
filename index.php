@@ -1,6 +1,8 @@
 <?php 
+    session_start();
+    include "model/pdo.php";
     include "view/header.php";
-    
+    include "model/taikhoan.php";
     if(isset($_GET["act"])){
     $act=$_GET["act"];
     switch ($act) {
@@ -18,7 +20,32 @@
             break;    
         case 'cart':
             include "view/cart.php";  
-            break;  
+            break;
+        case 'dangky':
+            if(isset($_POST['dangky'])&&($_POST['dangky'])){
+                $email= $_POST['email'];
+                $user= $_POST['user'];
+                $pass= $_POST['pass'];
+                insert_taikhoan($user, $pass,$email,);
+                $thongbao="Đã đăng kí thành công. Vui lòng đăng nhập để thực hiện chức năng";
+            }
+            include "view/taikhoan/dangky.php";  
+            break;
+         case 'dangnhap':
+                if(isset($_POST['dangnhap'])&&($_POST['dangnhap'])){
+                    $user= $_POST['user'];
+                    $pass= $_POST['pass'];
+                    $checkuser=check_user($user, $pass);
+                if(is_array($checkuser)){
+                        $_SESSION['user']=$checkuser;
+                        $thongbao="Bạn đã đăng nhập thành công";
+                        header('Location: index.php');
+                }else {
+                    $thongbao="Tài khoản không tồn tại";
+                }
+    }
+            include "view/taikhoan/dangnhap.php";  
+            break;         
         default:
             include "view/home.php";  
             break;
