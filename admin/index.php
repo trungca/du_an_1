@@ -61,12 +61,12 @@ include "header.php";
             case "xoadh" :   
                 include "donhang/xoadh.php";
                 break;
-            case "dsbanner" :   
-                include "banner/dsbanner.php";
-                break;
-            case "suabanner"  :
-                include "banner/suabanner.php";
-                break;
+            case "thongke" :   
+                    include "thongke/thongke.php";
+                    break;
+            default:
+                include "view/home.php";  
+                break;    
      
         }
     }else{

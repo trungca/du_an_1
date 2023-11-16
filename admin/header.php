@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Admin Template</title>
+    <title>Admin Nhóm 7</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -142,17 +142,11 @@
                                 <li><a title="Blog Details" href="index.php?act=dsbl"><span class="mini-sub-pro">Thêm Đơn Hàng</span></a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a class="has-arrow" href="index.php?act=dsbanner" aria-expanded="false"><span class="mini-click-non">Banner marketing</span></a>
-                            <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="File Manager" href="index.php?act=dsbanner"><span class="mini-sub-pro">Danh Sách Banner</span></a></li>
-                                <li><a title="File Manager" href="index.php?act=suabanner"><span class="mini-sub-pro">Sửa Banner</span></a></li>
-                            </ul>
-                        </li>
-                        <li class="active"><a class="has-arrow" href="index.php">	   
-								   <span class="mini-click-non">Teams</span>
+                        
+                        <li class="active"><a class="has-arrow" href="index.php?act=thongke">	   
+								   <span class="mini-click-non">Thống Kê</span>
 								</a>
- </li>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -200,7 +194,7 @@
                                                 <li class="nav-item">
                                                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
 															<i class="icon nalika-user"></i>
-															<span class="admin-name">Nguyễn Tấn Đức</span>
+															<span class="admin-name">Nguyễn Trọng Giáp</span>
 															<i class="icon nalika-down-arrow nalika-angle-dw"></i>
 														</a>
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
