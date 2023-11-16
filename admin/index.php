@@ -61,8 +61,9 @@ include "header.php";
             case "xoadh" :   
                 include "donhang/xoadh.php";
                 break;
-            case "thongke" :   
-                    include "thongke/thongke.php";
+            case "thongke" :
+                $listthongke=loadall_thongke();  
+                    include "thongke/list.php";
                     break;
             default:
                 include "view/home.php";  

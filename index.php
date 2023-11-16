@@ -1,8 +1,13 @@
 <?php 
     session_start();
     include "model/pdo.php";
+    include "model/sanpham.php";
     include "view/header.php";
     include "model/taikhoan.php";
+    include "global.php";
+
+    $spnew=loadall_sanpham_home(); 
+
     if(isset($_GET["act"])){
     $act=$_GET["act"];
     switch ($act) {
@@ -21,6 +26,11 @@
         case 'cart':
             include "view/cart.php";  
             break;
+        case 'addtocart':
+            // if(isset($_POST['addtocart'])&&($_POST['addtocart'])){
+
+            //     include "view/cart/viewcart.php";  
+            //     break;    
         case 'dangky':
             if(isset($_POST['dangky'])&&($_POST['dangky'])){
                 $email= $_POST['email'];
