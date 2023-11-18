@@ -134,13 +134,6 @@ include "header.php";
             case "xoadh" :   
                 include "donhang/xoadh.php";
                 break;
-            case "dsbanner" :   
-                include "banner/dsbanner.php";
-                break;
-            case "suabanner"  :
-                include "banner/suabanner.php";
-                break;
-     
         }
     }else{
         include "home.php";
