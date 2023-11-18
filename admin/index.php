@@ -66,7 +66,7 @@ include "header.php";
                     $image = $_FILES['image']['name'];
                     $soluong = $_POST['soluong'];
 
-                    update_sanpham($iddm, $idsp, $tensp, $giasp, $mota, $hinh,$soluong);
+                    update_sanpham($iddm, $idsp, $tensp, $giasp, $mota, $image,$soluong);
                     $thongbao = "Cập nhật thành công";
                 }
                     $kyw = '';

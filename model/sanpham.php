@@ -58,11 +58,11 @@ function load_sanpham_cungloai($id, $iddm) {
     return $listsanpham;
 }
 
-function update_sanpham($iddm, $id, $tensp, $giasp, $mota, $hinh) {
-    if ($hinh != "") {
-        $sql = "UPDATE san_pham SET iddm='$iddm', name ='$tensp', gia ='$giasp', mota ='$mota', hinh ='$hinh' WHERE id = $id";
+function update_sanpham($iddm, $idsp, $tensp, $giasp, $mota, $image,$soluong) {
+    if ($image != "") {
+        $sql = "UPDATE san_pham SET iddm='$iddm',idsp='$idsp', name ='$tensp', gia ='$giasp', mota ='$mota', image ='$image',soluong='$soluong', WHERE idsp = $idsp";
     } else {
-        $sql = "UPDATE san_pham SET iddm='$iddm', name ='$tensp', gia ='$giasp', mota ='$mota' WHERE id = $id";
+        $sql = "UPDATE san_pham SET iddm='$iddm',idsp='$idsp', name ='$tensp', gia ='$giasp', mota ='$mota',soluong='$soluong', WHERE idsp = $idsp";
     }
     pdo_execute($sql);
 }
