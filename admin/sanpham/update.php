@@ -35,6 +35,7 @@
                                                             foreach($listdanhmuc as $danhmuc){
                                                                 extract($danhmuc);
                                                                 echo '<option value="'.$id.'">'.$name.'</option>';
+                                                                
                                                             }
                                                             ?>
                                                             </select>
