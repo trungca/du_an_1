@@ -43,13 +43,10 @@
                                                             <br>
                                                             <select name="iddm" class="form-control pro-edt-select form-control-primary" >
                                                             <?php
-                                                            foreach ($listdanhmuc as $danhmuc) {
-                                                                // extract($danhmuc);
-                                                                if ($iddm == $danhmuc['id']) $s = "selected";
-                                                                else $s = "";
-                                                                echo ' <option value="' . $danhmuc['id'] . '" ' . $s . '>' . $danhmuc['name'] . '</option>';
-                                                                // echo' <option value="'.$id.'" selected>'.$name.'</option>';
-                                                                // else echo '<option value="'.$id.'">'.$name.'</option>'
+                                                            foreach($listdanhmuc as $danhmuc){
+                                                                extract($danhmuc);
+                                                                echo '<option value="'.$id.'">'.$name.'</option>';
+                                                                
                                                             }
                                                             ?>
 
