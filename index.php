@@ -49,7 +49,7 @@
                 if(is_array($checkuser)){
                         $_SESSION['user']=$checkuser;
                         $thongbao="Bạn đã đăng nhập thành công";
-                        header('Location: index.php');
+                        echo "<script>window.location.herf='index.php'</script>";
                 }else {
                     $thongbao="Tài khoản không tồn tại";
                 }

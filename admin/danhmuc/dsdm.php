@@ -45,84 +45,30 @@
                                     <th></th>
                                     <th>Chức Năng</th>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Sản Phẩm 1</td>
+                                <?php
+                                foreach($listdanhmuc as $danhmuc){
+                                    extract($danhmuc);
+                                    
+                                    $suadm="index.php?act=suadm&id=".$id;
+                                    $xoadm="index.php?act=xoadm&id=".$id;
+                                    echo '<tr>
+                                    <td>'.$id.'</td>
+                                    <td>'.$name.'</td>
                                     <td>
                                      
                                     </td>
                                     
                                     <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                    <a href="'.$suadm.'"><button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    <a href="'.$xoadm.'"><button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Sản Phẩm 2</td>
-                                    <td>
-                                        
-                                    </td>
-                                    
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><3</td>
-                                    <td>Sản Phẩm 3</td>
-                                    <td>
-                                        
-                                    </td>
-                                    
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Sản Phẩm 4</td>
-                                    <td>
-                                     
-                                    </td>
-                                    
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Sản Phẩm 5</td>
-                                    <td>
-                                     
-                                    </td>
-                                 
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Sản Phẩm 6</td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
+                                </tr>';
+                                }
+                                ?>
                             </table>
                             <div class="custom-pagination">
 								<ul class="pagination">
-									<li class="page-item"><a class="page-link" href="#">Previous</a></li>
-									<li class="page-item"><a class="page-link" href="#">1</a></li>
-									<li class="page-item"><a class="page-link" href="#">2</a></li>
-									<li class="page-item"><a class="page-link" href="#">3</a></li>
-									<li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                <a href="index.php?act=themdm"><input class="btn btn-ctl-bt waves-effect waves-light" type="button" value="NHẬP THÊM" style="color:white"></a>
 								</ul>
                             </div>
                         </div>
