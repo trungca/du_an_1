@@ -72,7 +72,7 @@ include "header.php";
                     $kyw = '';
                     $listdanhmuc = loadall();
                     $listsanpham = loadall_sanpham($kyw, $iddm);
-                    include "sanpham/dssp.php";
+                    include "sanpham/themsp.php";
                     break;  
             case 'ctsp';
                     include "ctsp.php";
@@ -96,6 +96,12 @@ include "header.php";
                 }
                 $listdanhmuc=loadall();
                 include "danhmuc/dsdm.php";
+                break;
+            case 'suadm';
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+                    $dm = loadone(($_GET['id']));
+                }
+                include "danhmuc/update.php";
                 break;
             case 'updatedm';
              if(isset($_POST['capnhat']) && ($_POST['capnhat'])){
