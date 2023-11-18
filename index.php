@@ -6,23 +6,48 @@
     include "model/taikhoan.php";
     include "global.php";
 
-    $spnew=loadall_sanpham_home(); 
+    $spnew = loadall_sanpham_home();
+    // $dsdm = loadall();
+    $dstop10 = loadall_sanpham_top10();
 
     if(isset($_GET["act"])){
     $act=$_GET["act"];
     switch ($act) {
-        case 'contact':
-            include "view/contact.php";  
-            break;
+        case 'sanpham':
+            if(isset($POST['kyw'])&&($_POST['kyw']!="")){
+                $kyw= $_POST['kyw'];
+            }else{
+                $kyw="";
+            }
+            if(isset($_GET['iddm'])&&($_GET['iddm']>0)){
+                $iddm= $_GET['iddm'];
+            }else{
+                $iddm=0;
+            }
+            $dssp = loadall_sanpham("",$iddm);
+            $tendm= load_ten_dm($iddm);
+            include "view/sanpham.php";
+            break; 
+        case 'sanphamct':
+                if(isset($_GET['idsp'])&&($_GET['idsp']>0)){
+                    $id= $_GET['idsp'];
+                    $onesp=loadone_sanpham($id);
+                    extract($onesp);
+                    $sp_cung_loai = load_sanpham_cungloai($id,$iddm);
+                    include "view/sanphamct.php";
+                }else{
+                    include "view/home.php";
+                }
+                break;
         case 'shop':
-            include "view/shop.php";  
+            include "view/shop.php";
             break;
         case 'chitietsp':
             include "view/chitietsp.php";  
             break;
         case 'thanhtoan':
             include "view/thanhtoan.php";  
-            break;    
+            break;
         case 'cart':
             include "view/cart.php";  
             break;
