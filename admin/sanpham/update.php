@@ -1,15 +1,4 @@
-<?php
-    if (is_array($sanpham)) {
-    extract($sanpham);
-    }
-    $hinhpart = "../upload/" . $hinh;
-    if (is_file($hinhpart)) {
-    $hinh = "<img src='" . $hinhpart . "' height='80'>";
-    } else {
-    $hinh = "no poto";
-}
 
-?>
 <div class="breadcome-area">
                 <div class="container-fluid">
                     <div class="row">
