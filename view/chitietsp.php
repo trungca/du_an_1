@@ -1,3 +1,4 @@
+<div class="chitietsp">
 <div class="container-fluid">
     <div class="row px-xl-5">
         <div class="col-12">
@@ -143,6 +144,7 @@
             </div>
         </div>
     </div>
+</div>
     <div class="row px-xl-5">
         <div class="col">
             <div class="bg-light p-30">
@@ -160,13 +162,26 @@
 
                     <!-- Comment -->
                     <div class="tab-pane fade" id="tab-pane-3">
-                        <?php include "./view/binhluan.php"; ?>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+                        <script>
+                            $(document).ready(function() {
+
+                                $("#binhluan").load("view/binhluan,php", {  
+                                    idsp: <?= $idsp ?>
+                                });
+                            });
+                        </script>
+
+                        <div id="binhluan" style="margin-top:100px ;">
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
+    </div>
 </div>
 </div>
 </div>

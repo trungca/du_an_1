@@ -29,7 +29,7 @@
         pdo_execute($sql);
     }
     function loadall_taikhoan(){
-        $sql="select * from taikhoan order by idtk desc";
+        $sql="select * from taikhoan order by idtk asc";
         $listtaikhoan=pdo_query($sql);
         return $listtaikhoan;
     }
@@ -38,8 +38,8 @@
         $tk=pdo_query_one($sql);
         return $tk;
     }
-    function delete_taikhoan($id){
-        $delete="delete from taikhoan where id =" .$id;
+    function delete_taikhoan($idtk){
+        $delete="delete from taikhoan where idtk =" .$idtk;
         pdo_execute($delete);
     }
     function checkdoimk($user, $passcu, $passmoi){

@@ -118,19 +118,19 @@
                 include "./view/taikhoan/quenmk.php";
                 break;
 
-            case 'guibinhluan':
-                if (isset($_POST['guibinhluan']) && ($_POST['guibinhluan'])) {
-                    $noidung = $_POST['noidung'];
-                    $idsp = $_POST['idsp'];
-                    $idtk =  $_SESSION['idbl'];
-                    $ngaybinhluan = date('G:i:s A d/m/Y');
+            // case 'guibinhluan':
+            //     if (isset($_POST['guibinhluan']) && ($_POST['guibinhluan'])) {
+            //         $noidung = $_POST['noidung'];
+            //         $idsp = $_SESSION['idsp'];
+            //         $idtk =  $_SESSION['idtk'];
+            //         $ngaybinhluan = date('G:i:s A d/m/Y');
         
-                    // $ngaybinhluan=date('l jS \of F Y h:i:s A');
-                    insert_binhluan($noidung, $idtk, $idsp, $ngaybinhluan);
-                    header("location: " . $_SERVER['HTTP_REFERER']);
-                } 
-                include ".view/binhluan.php"   ;
-            break;
+            //         // $ngaybinhluan=date('l jS \of F Y h:i:s A');
+            //         insert_binhluan($noidung, $idtk, $idsp, $ngaybinhluan);
+            //         header("location: " . $_SERVER['HTTP_REFERER']);
+            //     } 
+            //     include ".view/binhluan.php"   ;
+            // break;
         default:
             include "view/home.php";  
             break;

@@ -10,7 +10,7 @@
 												<i class="icon nalika-home"></i>
 											</div>
 											<div class="breadcomb-ctn">
-												<h2>Product Edit</h2>
+												<h2>User Edit</h2>
 												<p>Welcome to Nalika <span class="bread-ntd">Admin Template</span></p>
 											</div>
 										</div>
@@ -40,122 +40,45 @@
                             </div>
                             <table>
                                 <tr>
-                                    <th>Hình</th>
+                                    <th>ID</th>
                                     <th>Tên Tài Khoản</th>
-                                    <th>Trạng Thái</th>
+                                    <th>User</th>
                                     <th>Mật Khẩu</th>
                                     <th>Email</th>
                                     <th>Địa Chỉ</th>
-                                    <th>Điện thoại</th>
+                                    <th>Điện Thoại</th>
                                     <th>Vai Trò</th>
                                     <th>Chức Năng</th>
                                 </tr>
+                                <?php
+                                foreach($listtaikhoan as $taikhoan){
+                                    extract($taikhoan); 
+                                    if($rolo == 1) {
+                                        $vaitro = 'Admin';
+                                    } else {
+                                        $vaitro = 'User';
+                                    }
+                                    $suatk="index.php?act=suatk&idtk=".$idtk;
+                                    $xoatk="index.php?act=xoatk&idtk=".$idtk;                                      
+                                echo'
                                 <tr>
-                                    <td><img src="img/new-product/5-small.jpg" alt="" /></td>
-                                    <td>Sản Phẩm 1</td>
+                                    <td>'.$idtk.'</td>                                   
+                                    <td>'.$name.'</td>
+                                    <td>'.$user.'</td>
+                                    <td>'.$pass.'</td>
+                                    <td>'.$email.'</td>
+                                    <td>'.$address.'</td>
+                                    <td>'.$tel.'</td>
+                                    <td>'.$vaitro.'</td> 
                                     <td>
-                                        <button class="pd-setting">Active</button>
+                                        <button href="'.$suatk.'" data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true" ></i></button>
+                                        <button href="'.$xoatk.'" data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true" ></i></button>
                                     </td>
-                                    <td>50</td>
-                                    <td>$750</td>
-                                    <td>Out Of Stock</td>
-                                    <td>$15</td>
-                                    <td></td>
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/new-product/6-small.jpg" alt="" /></td>
-                                    <td>Sản Phẩm 2</td>
-                                    <td>
-                                        <button class="ps-setting">Paused</button>
-                                    </td>
-                                    <td>60</td>
-                                    <td>$1020</td>
-                                    <td>In Stock</td>
-                                    <td>$17</td>
-                                    <td></td>
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/new-product/7-small.jpg" alt="" /></td>
-                                    <td>Sản Phẩm 3</td>
-                                    <td>
-                                        <button class="ds-setting">Disabled</button>
-                                    </td>
-                                    <td>70</td>
-                                    <td>$1050</td>
-                                    <td>Low Stock</td>
-                                    <td>$15</td>
-                                    <td></td>
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/new-product/5-small.jpg" alt="" /></td>
-                                    <td>Sản Phẩm 4</td>
-                                    <td>
-                                        <button class="pd-setting">Active</button>
-                                    </td>
-                                    <td>120</td>
-                                    <td>$1440</td>
-                                    <td>In Stock</td>
-                                    <td>$12</td>
-                                    <td></td>
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/new-product/6-small.jpg" alt="" /></td>
-                                    <td>Sản Phẩm 5</td>
-                                    <td>
-                                        <button class="pd-setting">Active</button>
-                                    </td>
-                                    <td>30</td>
-                                    <td>$540</td>
-                                    <td>Out Of Stock</td>
-                                    <td>$18</td>
-                                    <td></td>
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/new-product/7-small.jpg" alt="" /></td>
-                                    <td>Sản Phẩm 6</td>
-                                    <td>
-                                        <button class="ps-setting">Paused</button>
-                                    </td>
-                                    <td>400</td>
-                                    <td>$4000</td>
-                                    <td>In Stock</td>
-                                    <td>$10</td>
-                                    <td></td>
-                                    <td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
+                                </tr>';
+                                }
+                               ?>
                             </table>
-                            <div class="custom-pagination">
-								<ul class="pagination">
-									<li class="page-item"><a class="page-link" href="#">Previous</a></li>
-									<li class="page-item"><a class="page-link" href="#">1</a></li>
-									<li class="page-item"><a class="page-link" href="#">2</a></li>
-									<li class="page-item"><a class="page-link" href="#">3</a></li>
-									<li class="page-item"><a class="page-link" href="#">Next</a></li>
-								</ul>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

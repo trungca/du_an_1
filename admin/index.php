@@ -1,5 +1,7 @@
 <?php
 include("../model/pdo.php");
+include("../model/taikhoan.php");
+include("../model/binhluan.php");
 include "header.php";
     if(isset($_GET['act'])&&($_GET['act']!="")){
         $act=$_GET['act'];
@@ -23,22 +25,30 @@ include "header.php";
                 include "danhmuc/dsdm.php";
                 break;
             case "themdm":
-                if(isset($_POST['themmoi'])&& ($_POST['themmoi'])){
-                    $tenloai=$_POST['tenloai'];
-                    insert_danhmuc($tenloai);
-                    $thongbao="thêm thành công";
-                }
+                // if(isset($_POST['themmoi'])&& ($_POST['themmoi'])){
+                //     $tenloai=$_POST['tenloai'];
+                //     insert_danhmuc($tenloai);
+                //     $thongbao="thêm thành công";
+                // }
 
                 include "./danhmuc/themdm.php";
                 break;    
             case "suadm":
                 include "danhmuc/suadm.php" ;                        
                 break;               
-            case "dstk":
-                include "taikhoan/dstk.php";
+            case 'dstk':
+                $listtaikhoan = loadall_taikhoan();
+                include "./taikhoan/dstk.php";
                 break;
             case "xoatk":
-                include "taikhoan/xoatk.php";
+                if($rolo != 1){
+                if (isset($_GET['idtk']) && ($_GET['idtk'] > 0)) {
+                    delete_taikhoan($_GET['idtk']);
+                }
+                $sql = "select * from taikhoan order by id arc";
+                $listtaikhoan = pdo_query($sql);
+                }
+                include "taikhoan/dstk.php";
                 break;    
             case "suatk":
                 include "taikhoan/suatk.php" ;                          
