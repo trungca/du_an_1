@@ -105,7 +105,6 @@
                             <ul class="submenu-angle" aria-expanded="true">
                                 <li><a title="Product List" href="index.php?act=dssp"><span class="mini-sub-pro">Danh Sách Sản Phẩm</span></a></li>
                                 <li><a title="Product Add " href="index.php?act=themsp"><span class="mini-sub-pro">Thêm Sản Phẩm</span></a></li>
-                                <li><a title="Product Edit" href="index.php?act=suasp"><span class="mini-sub-pro">Sửa Sản phẩm</span></a></li>
                                 <li><a title="Compose Mail" href="index.php?act=ctsp"><span class="mini-sub-pro">Chi Tiết Sản Phẩm</span></a></li>
 
                             </ul>
@@ -137,8 +136,6 @@
                             <a class="has-arrow" href="index.php?act=dsdh" aria-expanded="false"><span class="mini-click-non">Đơn Hàng </span></a>
                             <ul class="submenu-angle" aria-expanded="false">
                                 <li><a title="File Manager" href="index.php?act=dsdh"><span class="mini-sub-pro">Danh Sách Đơn Hàng</span></a></li>
-                                <li><a title="Blog" href="index.php?act=dsbl"><span class="mini-sub-pro">Sửa Đơn Hàng</span></a></li>
-                                <li><a title="Blog Details" href="index.php?act=dsbl"><span class="mini-sub-pro">Thêm Đơn Hàng</span></a></li>
                             </ul>
                         </li>
                         

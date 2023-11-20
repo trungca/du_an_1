@@ -2,6 +2,8 @@
 include("../model/pdo.php");
 include("../model/danhmuc.php");
 include("../model/sanpham.php");
+include("../model/thongke.php");
+
 
 include "header.php";
     if(isset($_GET['act'])&&($_GET['act']!="")){
@@ -66,13 +68,13 @@ include "header.php";
                     $image = $_FILES['image']['name'];
                     $soluong = $_POST['soluong'];
 
-                    update_sanpham($iddm, $idsp, $tensp, $giasp, $mota, $hinh,$soluong);
+                    update_sanpham($iddm, $idsp, $tensp, $giasp, $mota, $image,$soluong);
                     $thongbao = "Cập nhật thành công";
                 }
                     $kyw = '';
                     $listdanhmuc = loadall();
                     $listsanpham = loadall_sanpham($kyw, $iddm);
-                    include "sanpham/dssp.php";
+                    include "sanpham/themsp.php";
                     break;  
             case 'ctsp';
                     include "ctsp.php";
@@ -96,6 +98,12 @@ include "header.php";
                 }
                 $listdanhmuc=loadall();
                 include "danhmuc/dsdm.php";
+                break;
+            case 'suadm';
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+                    $dm = loadone(($_GET['id']));
+                }
+                include "danhmuc/update.php";
                 break;
             case 'updatedm';
              if(isset($_POST['capnhat']) && ($_POST['capnhat'])){
@@ -133,6 +141,13 @@ include "header.php";
                 break;
             case "xoadh" :   
                 include "donhang/xoadh.php";
+                break;
+            case 'thongke':
+                $listthongke=loadall_thongke();
+                include "thongke/list.php";
+                break;
+            default:
+                include "home.php";
                 break;
         }
     }else{

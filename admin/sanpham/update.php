@@ -1,4 +1,15 @@
+<?php
+    if (is_array($sanpham)) {
+    extract($sanpham);
+    }
+    $hinh_part = "../upload/" . $image;
+    if (is_file($hinh_part)) {
+    $image = "<img src='" . $hinh_part . "' height='80'>";
+    } else {
+    $image = "no poto"; 
+}
 
+?>
 <div class="breadcome-area">
                 <div class="container-fluid">
                     <div class="row">
@@ -32,12 +43,16 @@
                                                             <br>
                                                             <select name="iddm" class="form-control pro-edt-select form-control-primary" >
                                                             <?php
-                                                            foreach($listdanhmuc as $danhmuc){
-                                                                extract($danhmuc);
-                                                                echo '<option value="'.$id.'">'.$name.'</option>';
-                                                                
+                                                            foreach ($listdanhmuc as $danhmuc) {
+                                                                // extract($danhmuc);
+                                                                if ($iddm == $danhmuc['id']) $s = "selected";
+                                                                else $s = "";
+                                                                echo ' <option value="' . $danhmuc['id'] . '" ' . $s . '>' . $danhmuc['name'] . '</option>';
+                                                                // echo' <option value="'.$id.'" selected>'.$name.'</option>';
+                                                                // else echo '<option value="'.$id.'">'.$name.'</option>'
                                                             }
                                                             ?>
+
                                                             </select>
                                                         </div>
                                                         </div>
@@ -46,9 +61,11 @@
                                                             <input type="text" class="form-control" name="tensp" placeholder="Tên Sản Phẩm" value="<?= $tensp ?>">
                                                         </div>
                                                         <div class="input-group mg-b-pro-edt">
-                                                            <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
-                                                            <input type="file" class="form-control" name="image" placeholder="Hình" value="<?= $image ?>">
+                                                            <!-- <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
+                                                            <input type="file" class="form-control" name="image" placeholder="Hình" value=""> -->
+                                                            <input type="file" class="form-control" name="image" value=""><?=$image?>
                                                         </div>
+                                                        
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-usd" aria-hidden="true"></i></span>
                                                             <input type="text" class="form-control" name="giasp" placeholder="Giá" value="<?= $giasp ?>">
@@ -77,7 +94,6 @@
                                                 </div>
                                             </div>
                                 </form>
-                                        
                                     </div>
                                 </div>
                             </div>
