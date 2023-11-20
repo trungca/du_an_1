@@ -11,7 +11,7 @@
 											</div>
 											<div class="breadcomb-ctn">
 												<h2>Product Cart</h2>
-												<p>Welcome to Nalika <span class="bread-ntd">Admin Template</span></p>
+												<p>Welcome to Nalika <span class="bread-ntd">Admin Template 1 </span></p>
 											</div>
 										</div>
                                     </div>
