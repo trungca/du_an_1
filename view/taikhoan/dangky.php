@@ -18,6 +18,9 @@
                                 <div class="input-field"> <span class="fas fa-lock px-2"></span> <input type="password" placeholder="Mật khẩu" name="pass" required> <button class="btn bg-white text-muted"> <span class="far fa-eye-slash"></span> </button> </div>
                             </div>
                             <div class="form-group py-1 pb-2">
+                                <div class="input-field"> <span class="fas fa-lock px-2"></span> <input type="password" placeholder="Nhập lại mật khẩu" name="passconfirm" required> <button class="btn bg-white text-muted"> <span class="far fa-eye-slash"></span> </button> </div>
+                            </div>
+                            <div class="form-group py-1 pb-2">
                                 <div class="input-field"> <span class="fas fa-lock px-2"></span> <input type="email" placeholder="Email" name="email" required> <button class="btn bg-white text-muted"> <span class="far fa-eye-slash"></span> </button> </div>
                             </div>
                             <div class="form-group py-1 pb-2">

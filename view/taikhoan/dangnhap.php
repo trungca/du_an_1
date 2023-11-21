@@ -1,10 +1,15 @@
 <div class="container">
-    <?php
+    
+    <?php 
+
     if (isset($_SESSION['user'])) {
-        //extract($_SESSION['user']);
+        // extract($_SESSION['user']);
     ?>
         <a href="index.php?">Đơn hàng của tôi</a> <br>
         <a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a> <br>
+        <!-- <?php if($_SESSION['rolo'] ==1){ ?>
+            <a href="admin/index.php">Đăng nhập Admin</a> <br>
+        <?php } ?>        -->
         <a href="admin/index.php">Đăng nhập Admin</a> <br>
         <a href="index.php?act=doimk">Đổi mật khẩu</a> <br>
         <a href="index.php?act=quenmk">Lấy lại mật khẩu</a> <br>

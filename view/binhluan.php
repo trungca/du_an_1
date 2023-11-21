@@ -1,7 +1,7 @@
 <?php
 session_start();
-include "../../model/pdo.php";
-include "../../model/binhluan.php";
+include "../model/pdo.php";
+include "../model/binhluan.php";
 $idsp = $_REQUEST['idsp'];
 $dsbl = loadall_binhluan($idsp);
 

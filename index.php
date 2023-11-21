@@ -4,7 +4,8 @@
     include "view/header.php";
     include "model/taikhoan.php";
     include "model/binhluan.php";
-    if(isset($_GET["act"])){
+
+    if(isset($_GET["act"]) && ($_GET['act'] != "")){
     $act=$_GET["act"];
     switch ($act) {
         case 'contact':
@@ -52,8 +53,8 @@
     
             if ($rolo == 1) {
                 $_SESSION['rolo'] = $rolo;
+                echo "<script>window.location.herf='../du_an_1/admin/index.php'</script>";
                 
-                echo "<script>window.location.herf='./admin/index.php'</script>";
             }else if(is_array($kq)) {
                 $_SESSION['rolo'] = $rolo;
                 $_SESSION['idtk'] = $kq['idtk'];
@@ -62,10 +63,11 @@
                 
                              
             } else {
-                header('location:index.php?act=dangnhap');                }
+                header('location:index.php?act=dangnhap');
             }
-            include "./view/taikhoan/dangnhap.php";
-            break;
+            }
+        include "./view/taikhoan/dangnhap.php";
+        break;
             case 'dangxuat':          
                 session_unset();
                 echo "<script>window.location.herf='index.php'</script>";
@@ -118,19 +120,19 @@
                 include "./view/taikhoan/quenmk.php";
                 break;
 
-            // case 'guibinhluan':
-            //     if (isset($_POST['guibinhluan']) && ($_POST['guibinhluan'])) {
-            //         $noidung = $_POST['noidung'];
-            //         $idsp = $_SESSION['idsp'];
-            //         $idtk =  $_SESSION['idtk'];
-            //         $ngaybinhluan = date('G:i:s A d/m/Y');
+            case 'guibinhluan':
+                if (isset($_POST['guibinhluan']) && ($_POST['guibinhluan'])) {
+                    $noidung = $_POST['noidung'];
+                    $idsp = $_SESSION['idsp'];
+                    $idtk =  $_SESSION['idtk'];
+                    $ngaybinhluan = date('G:i:s A d/m/Y');
         
-            //         // $ngaybinhluan=date('l jS \of F Y h:i:s A');
-            //         insert_binhluan($noidung, $idtk, $idsp, $ngaybinhluan);
-            //         header("location: " . $_SERVER['HTTP_REFERER']);
-            //     } 
-            //     include ".view/binhluan.php"   ;
-            // break;
+                    // $ngaybinhluan=date('l jS \of F Y h:i:s A');
+                    insert_binhluan($noidung, $idtk, $idsp, $ngaybinhluan);
+                    header("location: " . $_SERVER['HTTP_REFERER']);
+                } 
+                include ".view/binhluan.php"   ;
+            break;
         default:
             include "view/home.php";  
             break;

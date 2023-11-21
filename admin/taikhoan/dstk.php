@@ -58,8 +58,8 @@
                                     } else {
                                         $vaitro = 'User';
                                     }
-                                    $suatk="index.php?act=suatk&idtk=".$idtk;
-                                    $xoatk="index.php?act=xoatk&idtk=".$idtk;                                      
+                                    $suatk="./admin/index.php?act=suatk&idtk=".$idtk;
+                                    $xoatk="./admin/index.php?act=xoatk&idtk=".$idtk;                                      
                                 echo'
                                 <tr>
                                     <td>'.$idtk.'</td>                                   

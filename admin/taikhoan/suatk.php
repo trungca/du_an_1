@@ -60,7 +60,7 @@
                                                        <span class="input-group-addon"><i class="icon nalika-new-file" aria-hidden="true"></i></span>
                                                        <input type="text" class="form-control" name="pass" placeholder="Mật Khẩu" value="<?= $pass ?>">
                                                    </div>
-                                                   <div class="input-group mg-b-pro-edt">
+                                                   <div class="input-group mg-b-pro-edt"> 
                                                        <span class="input-group-addon"><i class="icon nalika-mail" aria-hidden="true"></i></span>
                                                        <input type="text" class="form-control" name="email" placeholder="Email" value="<?= $email ?>">
                                                    </div>
@@ -70,11 +70,11 @@
                                                    </div>
                                                    <div class="input-group mg-b-pro-edt">
                                                        <span class="input-group-addon"><i class="icon nalika-new-file" aria-hidden="true"></i></span>
-                                                       <input type="text" class="form-control" name="tel" placeholder="Điện Thoại">
+                                                       <input type="text" class="form-control" name="tel" placeholder="Điện Thoại" value="<?= $tel ?>>
                                                    </div>
                                                    <div class="input-group mg-b-pro-edt">
                                                        <span class="input-group-addon"><i class="icon nalika-new-file" aria-hidden="true"></i></span>
-                                                       <input type="text" class="form-control" name="rolo" placeholder="Vai trò">
+                                                       <input type="text" class="form-control" name="rolo" placeholder="Vai trò"value="<?= $rolo ?>>
                                                    </div>
                                                </div>
                                            </div>

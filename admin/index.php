@@ -1,7 +1,10 @@
 <?php
-include("../model/pdo.php");
-include("../model/taikhoan.php");
-include("../model/binhluan.php");
+session_start();
+// if (isset($_SESSION['rolo']) && ($_SESSION['rolo'] == 1)) {
+
+include '../model/binhluan.php';
+include '../model/pdo.php';
+include '../model/taikhoan.php';
 include "header.php";
     if(isset($_GET['act'])&&($_GET['act']!="")){
         $act=$_GET['act'];
@@ -38,17 +41,17 @@ include "header.php";
                 break;               
             case 'dstk':
                 $listtaikhoan = loadall_taikhoan();
-                include "./taikhoan/dstk.php";
+                include "taikhoan/dstk.php";
                 break;
             case "xoatk":
-                if($rolo != 1){
+               
                 if (isset($_GET['idtk']) && ($_GET['idtk'] > 0)) {
                     delete_taikhoan($_GET['idtk']);
                 }
-                $sql = "select * from taikhoan order by id arc";
+                $sql = "select * from taikhoan order by idtk arc";
                 $listtaikhoan = pdo_query($sql);
-                }
-                include "taikhoan/dstk.php";
+               
+                include "../taikhoan/dstk.php";
                 break;    
             case "suatk":
                 include "taikhoan/suatk.php" ;                          
@@ -83,4 +86,4 @@ include "header.php";
         include "home.php";
     }
     include "footer.php";
-?>
+// }
