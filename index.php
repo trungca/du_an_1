@@ -1,10 +1,12 @@
 <?php 
     session_start();
+    ob_start();
     include "model/pdo.php";
     include "model/danhmuc.php";
     include "model/sanpham.php";
-    include "view/header.php";
     include "model/taikhoan.php";
+    include "model/cart.php";
+    include "view/header.php";
     include "global.php";
 
     if(!isset($_SESSION['mycart'])) $_SESSION['mycart']=[];
@@ -13,8 +15,8 @@
     // $dsdm = loadall();
     $dstop10 = loadall_sanpham_top10();
 
-    if(isset($_GET["act"])){
-    $act=$_GET["act"];
+    if((isset($_GET['act']))&&($_GET['act']!="")){
+    $act=$_GET['act'];
     switch ($act) {
         case 'sanpham':
             if(isset($POST['kyw'])&&($_POST['kyw']!="")){
@@ -67,6 +69,17 @@
                 }
                     include "view/cart/viewcart.php";
                     break;
+        case 'delcart':
+                    if(isset($_GET['idcart'])){
+                         array_splice($_SESSION['mycart'],$_GET['idcart'],1);
+                    }else{
+                        $_SESSION['mycart']=[];
+                    }
+                    header('Location:index.php?act=addtocart');
+                    break;
+        case 'bill':
+            include "view/cart/bill.php";  
+            break;             
         case 'dangky':
             if(isset($_POST['dangky'])&&($_POST['dangky'])){
                 $email= $_POST['email'];
@@ -100,5 +113,5 @@
     include "view/home.php";  
 }
     include "view/footer.php";
-
+    ob_end_flush();
 ?>

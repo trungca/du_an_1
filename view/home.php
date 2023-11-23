@@ -273,7 +273,6 @@
 
             // Đảm bảo biến $linksp được khởi tạo trước khi sử dụng
             $linksp = isset($linksp) ? $linksp : '';
-
             echo '<div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                     <div class="product-item bg-light mb-4">
                         <div class="product-img position-relative overflow-hidden">
@@ -284,9 +283,11 @@
                                     <input type="hidden" name="tensp" value="'.$tensp.'">
                                     <input type="hidden" name="image" value="'.$image.'">
                                     <input type="hidden" name="giasp" value="'.$giasp.'">
-                                    <a class="btn btn-outline-dark btn-square" href="">
-                                    <input type="submit" name="addtocart" value="">
-                                    <i class="fa fa-shopping-cart"></i></a>
+                                    <a class="btn  btn-square">
+                                    <button type="submit" name="addtocart" value="Thêm vào giỏ hàng">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                    </a>
                                 </form>
                                 </div>
                             </div>

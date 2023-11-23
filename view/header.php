@@ -83,18 +83,11 @@
                 </a>
                 <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 999;">
                     <div class="navbar-nav w-100">
-                                <?php
-                                foreach($dsdm as $dm){
-                                    extract($dm);
-                                    $linkdm = "index.php?act=sanpham&iddm=".$id;
-                                    echo '<li><a href="'.$linkdm.'">'.$name.'</a></li>';
-                                }
-                                ?>
-                        <!-- <a href="" class="nav-item nav-link">Đồng hồ Casio</a>
                         <a href="" class="nav-item nav-link">Đồng hồ Casio</a>
                         <a href="" class="nav-item nav-link">Đồng hồ Casio</a>
                         <a href="" class="nav-item nav-link">Đồng hồ Casio</a>
-                        <a href="" class="nav-item nav-link">Đồng hồ Casio</a> -->
+                        <a href="" class="nav-item nav-link">Đồng hồ Casio</a>
+                        <a href="" class="nav-item nav-link">Đồng hồ Casio</a>
                     </div>
                 </nav>
             </div>
