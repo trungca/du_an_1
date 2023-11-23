@@ -44,7 +44,7 @@
                       <div class="border-bottom pb-2">
                           <div class="d-flex justify-content-between mb-3">
                               <h6>Tổng Tiền</h6>
-                              <h6>'.$tong.'</h6>
+                              <h6>$'.$tong.'</h6>
                           </div>
                           <div class="d-flex justify-content-between">
                               <h6 class="font-weight-medium">Phí Ship</h6>
@@ -55,7 +55,7 @@
               
                           <div class="d-flex justify-content-between mt-2">
                               <h5>Tổng Tiền</h5>
-                              <h5>'.$tong2.'</h5>
+                              <h5>$'.$tong2.'</h5>
                           </div>
                           <a href="index.php?act=bill">
                           <button class="btn btn-block btn-primary font-weight-bold my-3 py-3">ThanhToán</button>

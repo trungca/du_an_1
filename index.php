@@ -79,7 +79,11 @@
                     break;
         case 'bill':
             include "view/cart/bill.php";  
-            break;             
+            break;        
+        case 'billcomfirm':
+                            
+            include "view/cart/billcomfirm.php";  
+            break;         
         case 'dangky':
             if(isset($_POST['dangky'])&&($_POST['dangky'])){
                 $email= $_POST['email'];

@@ -114,6 +114,9 @@
                             <?php 
                                  $tong2=$tong+10; 
                                  echo '
+                                 <h6 class="font-weight-medium">Phí Ship:</h6>
+                                 <h6 class="font-weight-medium">$10</h6> <br> <br> <hr> <br> <br>
+                                <hr> <hr> <br> <hr> <br>
                                  <div class="d-flex justify-content-between mt-2">
                                      <h5>Tổng Tiền: </h5>
                                      <h5>'.$tong2. '</h5>
