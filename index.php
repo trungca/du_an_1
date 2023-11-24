@@ -12,7 +12,7 @@
     if(!isset($_SESSION['mycart'])) $_SESSION['mycart']=[];
 
     $spnew = loadall_sanpham_home();
-    // $dsdm = loadall();
+    $dsdm = loadall();
     $dstop10 = loadall_sanpham_top10();
 
     if((isset($_GET['act']))&&($_GET['act']!="")){
@@ -35,11 +35,11 @@
             break; 
         case 'sanphamct':
                 if(isset($_GET['idsp'])&&($_GET['idsp']>0)){
-                    $id= $_GET['idsp'];
-                    $onesp=loadone_sanpham($id);
+                    $idsp= $_GET['idsp'];
+                    $onesp=loadone_sanpham($idsp);
                     extract($onesp);
-                    $sp_cung_loai = load_sanpham_cungloai($id,$iddm);
-                    include "view/sanphamct.php";
+                    $sp_cung_loai = load_sanpham_cungloai($idsp,$iddm);
+                    include "view/chitietsp.php";
                 }else{
                     include "view/home.php";
                 }
