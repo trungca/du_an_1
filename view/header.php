@@ -82,14 +82,23 @@
                     <i class="fa fa-angle-down text-dark"></i>
                 </a>
                 <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 999;">
-                    <div class="navbar-nav w-100">
+                    <div class="navbar-nav w-100" >
+                        <?php
+                        $dsdm = loadall(); // Thay thế loadall_danhmuc() bằng hàm tương ứng của bạn
+                        foreach ($dsdm as $dm) {
+                            extract($dm);
+                            $linkdm = "index.php?act=sanpham&iddm=".$id;
+                            echo '<li><a href="'.$linkdm.'" style="color:black">'.$name.'</a></li>';
+                        }
+                        ?>
+                        <!-- <a href="" class="nav-item nav-link">Đồng hồ Casio</a>
                         <a href="" class="nav-item nav-link">Đồng hồ Casio</a>
                         <a href="" class="nav-item nav-link">Đồng hồ Casio</a>
                         <a href="" class="nav-item nav-link">Đồng hồ Casio</a>
-                        <a href="" class="nav-item nav-link">Đồng hồ Casio</a>
-                        <a href="" class="nav-item nav-link">Đồng hồ Casio</a>
+                        <a href="" class="nav-item nav-link">Đồng hồ Casio</a> -->
                     </div>
                 </nav>
+
             </div>
             <div class="col-lg-9">
                 <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">

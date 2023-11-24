@@ -11,24 +11,23 @@
     </div>
     <!-- Shop Detail Start -->
     <div class="container-fluid pb-5">
-        <div class="row px-xl-5">
+        <?php
+
+        echo'<div class="row px-xl-5">
             <div class="col-lg-5 mb-30">
                 <div id="product-carousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner bg-light">
                         <div class="carousel-item active">
                             <img class="w-100 h-100" src="view/img/product-1.jpg" alt="Image">
                         </div>
-                        <div class="carousel-item">
-                            <img class="w-100 h-100" src="view/img/product-2.jpg" alt="Image">
-                        </div>
                         
                     </div>
-                    <a class="carousel-control-prev" href="#product-carousel" data-slide="prev">
+                    <!-- <a class="carousel-control-prev" href="#product-carousel" data-slide="prev">
                         <i class="fa fa-2x fa-angle-left text-dark"></i>
                     </a>
                     <a class="carousel-control-next" href="#product-carousel" data-slide="next">
                         <i class="fa fa-2x fa-angle-right text-dark"></i>
-                    </a>
+                    </a> -->
                 </div>
             </div>
 
@@ -84,9 +83,9 @@
                         <a class="nav-item nav-link text-dark" data-toggle="tab" href="#tab-pane-3">Bình Luận</a>
                     </div>
                     <div class="tab-content">
-                        <div class="tab-pane fade show active" id="tab-pane-1">
+                        <!-- <div class="tab-pane fade show active" id="tab-pane-1">
                             <h4 class="mb-3">Product Description</h4>
-                        </div>
+                        </div> -->
                         <div class="tab-pane fade" id="tab-pane-2">
                             <h4 class="mb-3">Additional Information</h4>
                             <p>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>
@@ -146,6 +145,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>';
+    
+    ?>    
     </div>
     <!-- Shop Detail End -->

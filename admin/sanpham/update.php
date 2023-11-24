@@ -1,14 +1,13 @@
 <?php
-    if (is_array($sanpham)) {
+if (is_array($sanpham)) {
     extract($sanpham);
-    }
-    $hinh_part = "../upload/" . $image;
-    if (is_file($hinh_part)) {
-    $image = "<img src='" . $hinh_part . "' height='80'>";
-    } else {
-    $image = "no poto"; 
 }
-
+$hinh_part = "../upload/" . $image;
+if (is_file($hinh_part)) {
+    $imageHTML = "<img src='" . $hinh_part . "' height='80'>";
+} else {
+    $imageHTML = "<span>No photo</span>";
+}
 ?>
 <div class="breadcome-area">
                 <div class="container-fluid">

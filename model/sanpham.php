@@ -11,7 +11,7 @@ function delete_sanpham($idsp) {
 }
 
 function loadall_sanpham_home() {
-    $sql = "SELECT * FROM sanpham ORDER BY idsp DESC LIMIT 0,12";
+    $sql = "SELECT * FROM sanpham ORDER BY idsp DESC LIMIT 0,8";
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }
@@ -51,7 +51,6 @@ function loadone_sanpham($idsp) {
     $sp = pdo_query_one($sql);
     return $sp;
 }
-
 function load_sanpham_cungloai($idsp, $iddm) {
     $sql = "SELECT * FROM sanpham WHERE iddm = $iddm AND idsp <> $idsp";
     $listsanpham = pdo_query($sql);
@@ -59,7 +58,7 @@ function load_sanpham_cungloai($idsp, $iddm) {
 }
 function update_sanpham($iddm, $idsp, $tensp, $giasp, $mota, $image, $soluong) {
     if ($image != "") {
-        $sql = "UPDATE sanpham SET iddm='$iddm', tensp='$tensp', giasp='$giasp', mota='$mota', image='$imacdge', soluong='$soluong' WHERE idsp = $idsp";
+        $sql = "UPDATE sanpham SET iddm='$iddm', tensp='$tensp', giasp='$giasp', mota='$mota', image='$image', soluong='$soluong' WHERE idsp = $idsp";
     } else {
         $sql = "UPDATE sanpham SET iddm='$iddm', tensp='$tensp', giasp='$giasp', mota='$mota', soluong='$soluong' WHERE idsp = $idsp";
     }
