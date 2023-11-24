@@ -52,19 +52,18 @@ function loadone_sanpham($idsp) {
     return $sp;
 }
 
-function load_sanpham_cungloai($id, $iddm) {
+function load_sanpham_cungloai($idsp, $iddm) {
     $sql = "SELECT * FROM sanpham WHERE iddm = $iddm AND idsp <> $idsp";
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }
 function update_sanpham($iddm, $idsp, $tensp, $giasp, $mota, $image, $soluong) {
     if ($image != "") {
-        $sql = "UPDATE sanpham SET iddm='$iddm', tensp='$tensp', giasp='$giasp', mota='$mota', image='$image', soluong='$soluong' WHERE idsp = $idsp";
+        $sql = "UPDATE sanpham SET iddm='$iddm', tensp='$tensp', giasp='$giasp', mota='$mota', image='$imacdge', soluong='$soluong' WHERE idsp = $idsp";
     } else {
         $sql = "UPDATE sanpham SET iddm='$iddm', tensp='$tensp', giasp='$giasp', mota='$mota', soluong='$soluong' WHERE idsp = $idsp";
     }
     pdo_execute($sql);
 }
-
 
 ?>
