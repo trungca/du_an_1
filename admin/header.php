@@ -105,7 +105,6 @@
                             <ul class="submenu-angle" aria-expanded="true">
                                 <li><a title="Product List" href="index.php?act=dssp"><span class="mini-sub-pro">Danh Sách Sản Phẩm</span></a></li>
                                 <li><a title="Product Add " href="index.php?act=themsp"><span class="mini-sub-pro">Thêm Sản Phẩm</span></a></li>
-                                <li><a title="Compose Mail" href="index.php?act=ctsp"><span class="mini-sub-pro">Chi Tiết Sản Phẩm</span></a></li>
 
                             </ul>
                             

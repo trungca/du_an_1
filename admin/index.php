@@ -74,9 +74,6 @@ include "header.php";
                     $listdanhmuc = loadall();
                     $listsanpham = loadall_sanpham($kyw, $iddm);
                     include "sanpham/themsp.php";
-                    break;  
-            case 'ctsp';
-                    include "ctsp.php";
                     break;
             case "dsdm":
                 $listdanhmuc=loadall();

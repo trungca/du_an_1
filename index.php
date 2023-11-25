@@ -14,6 +14,7 @@
     $spnew = loadall_sanpham_home();
     $dsdm = loadall();
     $dstop10 = loadall_sanpham_top10();
+    $dsspnew = loadall_sanpham_new();
 
     if((isset($_GET['act']))&&($_GET['act']!="")){
     $act=$_GET['act'];
@@ -38,7 +39,7 @@
                     $idsp= $_GET['idsp'];
                     $onesp=loadone_sanpham($idsp);
                     extract($onesp);
-                    $sp_cung_loai = load_sanpham_cungloai($idsp,$iddm);
+                    // $sp_cung_loai = load_sanpham_cungloai($idsp,$iddm);
                     include "view/chitietsp.php";
                 }else{
                     include "view/home.php";

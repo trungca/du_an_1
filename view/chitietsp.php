@@ -2,23 +2,34 @@
         <div class="row px-xl-5">
             <div class="col-12">
                 <nav class="breadcrumb bg-light mb-30">
-                    <a class="breadcrumb-item text-dark" href="#">Home</a>
+                    <a class="breadcrumb-item text-dark" href="index.php?act=home.ph">Home</a>
                     <a class="breadcrumb-item text-dark" href="#">Shop</a>
                     <span class="breadcrumb-item active">Shop Detail</span>
                 </nav>
             </div>
+            <?php
+            if (is_array($onesp) && isset($onesp['tensp'], $onesp['giasp'], $onesp['image'])) {
+                extract($onesp);
+                // Rest of your code
+            } else {
+                // Handle the case where required keys are missing or $onesp is not an array
+                echo "Invalid data for product details.";
+            }
+            ?>
         </div>
     </div>
     <!-- Shop Detail Start -->
     <div class="container-fluid pb-5">
+                    
         <?php
-
+        extract($onesp);
+        $image=$img_path.$image;
         echo'<div class="row px-xl-5">
             <div class="col-lg-5 mb-30">
                 <div id="product-carousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner bg-light">
                         <div class="carousel-item active">
-                            <img class="w-100 h-100" src="view/img/product-1.jpg" alt="Image">
+                            <img class="w-100 h-100" src="'.$image.'" alt="Image">
                         </div>
                         
                     </div>
@@ -33,11 +44,17 @@
 
             <div class="col-lg-7 h-auto mb-30">
                 <div class="h-100 bg-light p-30">
-                    <h3>Product Name Goes Here</h3>
+                    <h3>'.$tensp.'</h3>
                     <div class="d-flex mb-3">
-                        
+                    <small class="pt-1" style="font-size: 18px">Số lượng còn ('.$soluong.' sản phẩm ) </small>
                     </div>
-                    <h3 class="font-weight-semi-bold mb-4">$150.00</h3>
+                    <span>Đồng hồ số đa năng màu đất — để bạn dễ dàng phối với bất kỳ phong cách thời trang nào mà bạn chọn.
+                     Những chiếc đồng hồ này không chỉ có thiết kế bên ngoài bền chắc mà còn có khả năng chống nước ở độ sâu 50 mét và tuổi thọ pin lên đến 7 năm</span>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h3 class="font-weight-semi-bold mb-4" style="color:red">'.$giasp.'</h3>
                     <div class="d-flex align-items-center mb-4 pt-2">
                         <div class="input-group quantity mr-3" style="width: 130px;">
                             <div class="input-group-btn">
@@ -83,9 +100,9 @@
                         <a class="nav-item nav-link text-dark" data-toggle="tab" href="#tab-pane-3">Bình Luận</a>
                     </div>
                     <div class="tab-content">
-                        <!-- <div class="tab-pane fade show active" id="tab-pane-1">
-                            <h4 class="mb-3">Product Description</h4>
-                        </div> -->
+                        <div class="tab-pane fade show active" id="tab-pane-1">
+                            <h4 class="mb-3">'.$mota.'</h4>
+                        </div> 
                         <div class="tab-pane fade" id="tab-pane-2">
                             <h4 class="mb-3">Additional Information</h4>
                             <p>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>

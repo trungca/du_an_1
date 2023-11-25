@@ -21,6 +21,11 @@ function loadall_sanpham_top10() {
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }
+function loadall_sanpham_new() {
+    $sql = "SELECT * FROM sanpham ORDER BY luotxem DESC LIMIT 0,12";
+    $listsanpham = pdo_query($sql);
+    return $listsanpham;
+}
 
 function loadall_sanpham($kyw = "", $iddm = 0) {
     $sql = "SELECT * FROM sanpham WHERE 1";
