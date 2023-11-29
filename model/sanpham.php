@@ -27,10 +27,10 @@ function loadall_sanpham_new() {
     return $listsanpham;
 }
 
-function loadall_sanpham($kyw = "", $iddm = 0) {
+function loadall_sanpham($kyw,$iddm) {
     $sql = "SELECT * FROM sanpham WHERE 1";
     if ($kyw != "") {
-        $sql .= " AND name LIKE '%" . $kyw . "%'";
+        $sql .= " AND tensp LIKE '%" . $kyw . "%'";
     }
     if ($iddm > 0) {
         $sql .= " AND iddm ='" . $iddm . "'";
@@ -42,7 +42,7 @@ function loadall_sanpham($kyw = "", $iddm = 0) {
 
 function load_ten_dm($iddm) {
     if ($iddm > 0) {
-        $sql = "SELECT * FROM danhmuc WHERE idsp = $iddm";
+        $sql = "SELECT * FROM danhmuc WHERE id = $iddm";
         $dm = pdo_query_one($sql);
         extract($dm);
         return $name;

@@ -19,7 +19,7 @@
     if((isset($_GET['act']))&&($_GET['act']!="")){
     $act=$_GET['act'];
     switch ($act) {
-        case 'sanpham':
+        case 'shop':
             if(isset($POST['kyw'])&&($_POST['kyw']!="")){
                 $kyw= $_POST['kyw'];
             }else{
@@ -32,7 +32,7 @@
             }
             $dssp = loadall_sanpham("",$iddm);
             $tendm= load_ten_dm($iddm);
-            include "view/sanpham.php";
+            include "view/shop.php";
             break; 
         case 'sanphamct':
                 if(isset($_GET['idsp'])&&($_GET['idsp']>0)){

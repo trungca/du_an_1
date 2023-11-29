@@ -20,8 +20,6 @@ include "header.php";
                 $listsanpham=loadall_sanpham($kyw,$iddm);
                 include "sanpham/dssp.php";
                 break;
-                
-                
             case 'themsp': // Đổi ; thành :
                     // Kiểm tra người dùng click vào nút add
                     if(isset($_POST['themmoi']) && ($_POST['themmoi'])){
