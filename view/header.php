@@ -47,18 +47,17 @@
         </div>
         <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
             <div class="col-lg-4">
-                <a href="" class="text-decoration-none">
+                <a href="index.php?act=home.php" class="text-decoration-none">
                     <span class="h1 text-uppercase text-primary bg-dark px-2">Casio</span>
                     <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">Shop</span>
                 </a>
             </div>
             <div class="col-lg-4 col-6 text-left">
-                <form action="">
+            <form action="index.php?act=dssp" method="POST">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for products">
+                        <input type="text" class="form-control" name="kyw" placeholder="SẢN PHẨM BẠN MUỐN TÌM ?">
                         <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary">
-                                <i class="fa fa-search"></i>
+                            <input type="submit" name="listok" placeholder="TÌM KIẾM" class="input-group-text bg-transparent text-primary" >
                             </span>
                         </div>
                     </div>
@@ -87,7 +86,7 @@
                         $dsdm = loadall(); // Thay thế loadall_danhmuc() bằng hàm tương ứng của bạn
                         foreach ($dsdm as $dm) {
                             extract($dm);
-                            $linkdm = "index.php?act=sanpham&iddm=".$id;
+                            $linkdm = "index.php?act=shop&iddm=".$id;
                             echo '<li><a href="'.$linkdm.'" style="color:black">'.$name.'</a></li>';
                         }
                         ?>
@@ -106,7 +105,6 @@
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.php?act=home" class="nav-item nav-link active">Trang chủ</a>
                             <a href="index.php?act=shop" class="nav-item nav-link">Sản Phẩm</a>
-                            <a href="index.php?act=chitietsp" class="nav-item nav-link">Chi Tiết Sản Phẩm</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Loại <i class="fa fa-angle-down mt-1"></i></a>
                                 <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">

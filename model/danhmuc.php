@@ -8,7 +8,7 @@ function delete_danhmuc($id){
     pdo_execute($sql);
 }
 function loadall(){
-    $sql = "SELECT * FROM danhmuc order by id desc";
+    $sql = "SELECT * FROM danhmuc order by id  desc";
     $listdanhmuc=pdo_query($sql);
     return $listdanhmuc;
 }

@@ -48,13 +48,24 @@
                     <div class="d-flex mb-3">
                     <small class="pt-1" style="font-size: 18px">Số lượng còn ('.$soluong.' sản phẩm ) </small>
                     </div>
-                    <span>Đồng hồ số đa năng màu đất — để bạn dễ dàng phối với bất kỳ phong cách thời trang nào mà bạn chọn.
-                     Những chiếc đồng hồ này không chỉ có thiết kế bên ngoài bền chắc mà còn có khả năng chống nước ở độ sâu 50 mét và tuổi thọ pin lên đến 7 năm</span>
+                    <span style="font-size: 15px ; color:blue" > 
+                    Thẻ bảo hành chính hãng CASIO
+                    Túi, hộp, khăn lau, găng tay đồng hồ
+                    Hướng dẫn sử dụng, voucher giảm giá  mua hàng, linh kiện
+                    Chính sách bảo hành lên đến 05 năm - xem thêm
+                    Thay pin miễn phí trọn đời, vệ sinh miễn phí
+                    Hỗ trợ chi phí thay mặt kính lần đầu tiên
+                    Tặng kèm kính dán cường lực cho đồng hồ mặt tròn
+                    Giao hàng COD toàn quốc từ 02-04 ngày - xem thêm
+                    Giao hàng tận nơi theo địa chỉ của  Quý khách hàng
+                    Xem và kiểm tra hàng thoải mái trước khi thanh toán
+                    Chính sách thanh toán linh hoạt - xem thêm
+                    Thanh toán thẻ, chuyển khoản, momo, zalopay...
+                    Thanh toán khi nhận hàng (COD)<br>
                     <br>
                     <br>
                     <br>
-                    <br>
-                    <h3 class="font-weight-semi-bold mb-4" style="color:red">'.$giasp.'</h3>
+                    <h3 class="font-weight-semi-bold mb-4" style="color:red">'.$giasp.' $</h3>
                     <div class="d-flex align-items-center mb-4 pt-2">
                         <div class="input-group quantity mr-3" style="width: 130px;">
                             <div class="input-group-btn">

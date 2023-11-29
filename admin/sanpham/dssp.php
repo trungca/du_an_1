@@ -35,9 +35,6 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="product-status-wrap">
                                 <h4>DANH SÁCH SẢN PHẨM</h4>
-                                <div class="add-product">
-                                    <a href="index.php?act=dssp">DANH SÁCH SẢN PHẨM</a>
-                                </div>
                                 <form action="index.php?act=dssp" method="POST">
                                         <input type="text" name="kyw">
                                         <select name="iddm" id="">
@@ -45,11 +42,11 @@
                                         <?php
                                             foreach($listdanhmuc as $danhmuc){
                                                 extract($danhmuc);
-                                                echo '<option value="'.$idsp.'">'.$name.'</option>';
+                                                echo '<option value="'.$id.'">'.$name.'</option>';
                                             }
                                         ?>
                                         </select>
-                                        <input type="submit" name="listok" value="GO">
+                                        <input type="submit" name="listok" value="Tìm kiếm">
                                 </form>
                                 <table>
                                     <tr>
